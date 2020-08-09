@@ -85,7 +85,7 @@ class MainApp(gui.MyFrame1):
             for col in range(cols):
                 # check datetime
                 if type(seat_state.iloc[row][col]) is datetime.datetime:
-                    delta = datetime.timedelta(minutes=self.__not_reusable_time)
+                    delta = datetime.timedelta(hours=self.__not_reusable_time)
                     if now < seat_state.iloc[row][col] + delta:
                         continue
 
